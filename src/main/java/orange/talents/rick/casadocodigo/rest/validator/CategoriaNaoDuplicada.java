@@ -1,6 +1,7 @@
 package orange.talents.rick.casadocodigo.rest.validator;
 
-import orange.talents.rick.casadocodigo.rest.validator.impl.EmailNaoDuplicadoValidator;
+
+import orange.talents.rick.casadocodigo.rest.validator.impl.CategoriaNaoDuplicadaValidator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
@@ -12,10 +13,10 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 @Target({FIELD})
 @Retention(RUNTIME)
-@Constraint(validatedBy = EmailNaoDuplicadoValidator.class)
-public @interface EmailNaoDuplicado {
+@Constraint(validatedBy = CategoriaNaoDuplicadaValidator.class)
+public @interface CategoriaNaoDuplicada {
 
-    String message() default "O e-mail informado já está cadastrado";
+    String message() default "A categoria informada já está cadastrada";
 
     Class<?>[] groups() default {};
 

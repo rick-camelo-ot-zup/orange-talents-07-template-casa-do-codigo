@@ -8,7 +8,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-public class AutorPostDto {
+public class AutorRequest {
 
     @NotNull
     @NotBlank
@@ -24,7 +24,7 @@ public class AutorPostDto {
     private String descricao;
 
     @Deprecated
-    public AutorPostDto() {
+    public AutorRequest() {
     }
 
     public Autor toModel(){

@@ -1,7 +1,7 @@
-package orange.talents.rick.casadocodigo.rest;
+package orange.talents.rick.casadocodigo.rest.controller;
 
 import orange.talents.rick.casadocodigo.repository.AutorRepository;
-import orange.talents.rick.casadocodigo.rest.dto.AutorPostDto;
+import orange.talents.rick.casadocodigo.rest.dto.AutorRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +18,7 @@ public class AutorController {
     }
 
     @PostMapping
-    public ResponseEntity<?> create(@RequestBody @Valid AutorPostDto dto){
+    public ResponseEntity<?> create(@RequestBody @Valid AutorRequest dto){
         repository.save(dto.toModel());
         return ResponseEntity.status(200).build();
     }
