@@ -1,8 +1,8 @@
-package orange.talents.rick.casadocodigo.rest.validator;
+package orange.talents.rick.casadocodigo.rest.validator.impl;
 
 import orange.talents.rick.casadocodigo.model.Autor;
 import orange.talents.rick.casadocodigo.repository.AutorRepository;
-import orange.talents.rick.casadocodigo.rest.dto.AutorPostDto;
+import orange.talents.rick.casadocodigo.rest.validator.EmailNaoDuplicado;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.validation.ConstraintValidator;
