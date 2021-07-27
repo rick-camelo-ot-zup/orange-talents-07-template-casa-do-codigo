@@ -1,7 +1,6 @@
 package orange.talents.rick.casadocodigo.rest.validator;
 
-
-import orange.talents.rick.casadocodigo.rest.validator.impl.CategoriaNaoDuplicadaValidator;
+import orange.talents.rick.casadocodigo.rest.validator.impl.NaoDuplicadoValidator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
@@ -13,14 +12,18 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 @Target({FIELD})
 @Retention(RUNTIME)
-@Constraint(validatedBy = CategoriaNaoDuplicadaValidator.class)
-public @interface CategoriaNaoDuplicada {
+@Constraint(validatedBy = NaoDuplicadoValidator.class)
+public @interface NaoDuplicado {
 
-    String message() default "A categoria informada já está cadastrada";
+    String message() default "Valor já cadastrado";
 
     Class<?>[] groups() default {};
 
     Class<? extends Payload>[] payload() default {};
 
     String value() default "";
+
+    Class<?> target();
+
+    String field();
 }
