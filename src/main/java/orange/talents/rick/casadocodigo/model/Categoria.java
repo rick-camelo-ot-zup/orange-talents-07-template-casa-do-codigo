@@ -3,7 +3,6 @@ package orange.talents.rick.casadocodigo.model;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import java.time.LocalDateTime;
 
 @Entity
 public class Categoria {
@@ -21,5 +20,9 @@ public class Categoria {
 
     public Categoria(String nome) {
         this.nome = nome;
+    }
+
+    public String getNome() {
+        return nome;
     }
 }
