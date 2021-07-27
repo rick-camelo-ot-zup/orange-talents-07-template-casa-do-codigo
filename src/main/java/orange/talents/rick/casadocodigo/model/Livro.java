@@ -71,4 +71,12 @@ public class Livro {
                 ", categoria=" + categoria.getNome() +
                 ", autor=" + autor.getNome();
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
 }
