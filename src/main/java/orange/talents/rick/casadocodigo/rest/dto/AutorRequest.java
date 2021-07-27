@@ -1,7 +1,7 @@
 package orange.talents.rick.casadocodigo.rest.dto;
 
 import orange.talents.rick.casadocodigo.model.Autor;
-import orange.talents.rick.casadocodigo.rest.validator.EmailNaoDuplicado;
+import orange.talents.rick.casadocodigo.rest.validator.NaoDuplicado;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.Email;
@@ -16,7 +16,7 @@ public class AutorRequest {
     @NotNull
     @NotBlank
     @Email
-    @EmailNaoDuplicado
+    @NaoDuplicado(target = Autor.class, field = "email", message = "O email já está cadastrado.")
     private String email;
     @NotBlank
     @NotNull
