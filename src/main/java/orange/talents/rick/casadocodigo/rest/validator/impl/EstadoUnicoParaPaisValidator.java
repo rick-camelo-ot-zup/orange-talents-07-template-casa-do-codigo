@@ -4,9 +4,7 @@ import orange.talents.rick.casadocodigo.model.Estado;
 import orange.talents.rick.casadocodigo.repository.EstadoRepository;
 import orange.talents.rick.casadocodigo.rest.dto.EstadoRequest;
 import orange.talents.rick.casadocodigo.rest.validator.EstadoUnicoParaPais;
-import orange.talents.rick.casadocodigo.rest.validator.NaoDuplicado;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.util.Assert;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
