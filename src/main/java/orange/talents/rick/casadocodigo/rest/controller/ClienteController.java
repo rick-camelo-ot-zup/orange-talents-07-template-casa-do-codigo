@@ -1,5 +1,6 @@
 package orange.talents.rick.casadocodigo.rest.controller;
 
+import orange.talents.rick.casadocodigo.model.Cliente;
 import orange.talents.rick.casadocodigo.repository.ClienteRepository;
 import orange.talents.rick.casadocodigo.repository.EstadoRepository;
 import orange.talents.rick.casadocodigo.repository.PaisRepository;
@@ -28,7 +29,7 @@ public class ClienteController {
 
     @PostMapping
     public ResponseEntity<?> create(@RequestBody @Valid ClienteRequest dto){
-        repository.save(dto.toModel(estadoRepository, paisRepository));
-        return ResponseEntity.ok().build();
+        Cliente cliente = repository.save(dto.toModel(estadoRepository, paisRepository));
+        return ResponseEntity.ok(cliente.getId());
     }
 }
