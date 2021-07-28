@@ -1,7 +1,6 @@
 package orange.talents.rick.casadocodigo.rest.validator;
 
 import orange.talents.rick.casadocodigo.rest.validator.impl.EstadoUnicoParaPaisValidator;
-import orange.talents.rick.casadocodigo.rest.validator.impl.NaoDuplicadoValidator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
