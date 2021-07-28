@@ -63,6 +63,10 @@ public class Cliente {
         this.cep = cep;
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public void setEstado(Estado estado) {
         this.estado = estado;
     }
